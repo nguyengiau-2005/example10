@@ -110,7 +110,7 @@ public class WebSecurityConfig {
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
                         .requestMatchers("/api/employee/**").hasAnyRole("ADMIN", "MODERATOR", "EMPLOYEE")
                         .requestMatchers("/api/user/**").hasAnyRole("USER", "ADMIN", "MODERATOR", "EMPLOYEE")
-
+                        .requestMatchers("/error").permitAll()
                         .anyRequest().authenticated());
 
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
