@@ -1,0 +1,16 @@
+package com.nguyengiau.example10.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class OrderDTO {
+    private Long orderId;
+    private String customerName;
+    private String tableNumber;
+    private String orderDetails;
+    private String status;
+}
